@@ -4,6 +4,7 @@ const tokens = {
     "blue": "#006cff",
     "blueLight10": "#3389ff",
     "blueDark10": "#0061e6",
+    "white": "#ffffff",
     "silverLight20": "#f8f8f8",
     "silverLight10": "#c5c5c5",
     "silver": "#323335",
@@ -245,4 +246,28 @@ export const footer = {
   size: typography.smallText,
   weight: typography.regular,
   color: tokens.colors.grayLight10,
+}
+
+export const charts = {
+  fontFamily: typography.fontFamily,
+  fontSize: typography.smallText,
+  color: tokens.colors.blueLight10,
+  labelColor: tokens.colors.grayLight10
+}
+
+export const chartModalButton = {
+  colorActive: tokens.colors.blue
+}
+
+export const modal = {
+  typography: {
+    fontFamily: typography.fontFamily
+  },
+  background: tokens.colors.white,
+  shadow: tokens.colors.black
+}
+
+export const modalControls = {
+  background: tokens.colors.silverLight20,
+  color: tokens.colors.grayLight10
 }

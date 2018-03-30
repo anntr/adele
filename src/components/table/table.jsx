@@ -17,6 +17,7 @@ import {
 } from './table.styles';
 import Icon from '../icon/icon';
 import link from '../../icons/link.svg';
+import ChartModalTrigger from '../chartModalTrigger/chart-modal-trigger';
 
 export default class Table extends Component {
   /* Filter Builter. Builds all the filters in the table based on JSON Data */
@@ -86,6 +87,7 @@ export default class Table extends Component {
         >
           <StyledThWrapper>
             <StyledLabel>{label}</StyledLabel>
+            {item !== 'company' && item !== 'system' && <ChartModalTrigger category={label} />}
             <Sorting
               sort={this.props.sort}
               sorting={this.props.sorting}

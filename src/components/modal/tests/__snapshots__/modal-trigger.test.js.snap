@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders trigger correctly 1`] = `
+<getContext(Component)>
+  <Component
+    openModal={[Function]}
+  >
+    <MockChild>
+      <div />
+    </MockChild>
+  </Component>
+</getContext(Component)>
+`;

@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+<ChartContainer
+  category="storybook"
+>
+  <Chart
+    title="storybook category summary"
+  >
+    <styled.div>
+      <div
+        className="sc-bdVaJa fHgTKa"
+      >
+        <styled.h3>
+          <h3
+            className="sc-bwzfXH crWMJl"
+          >
+            storybook category summary
+          </h3>
+        </styled.h3>
+        <Plot
+          data={Array []}
+        >
+          <FlexibleXYPlot
+            margin={
+              Object {
+                "left": 160,
+                "right": 150,
+              }
+            }
+            yType="ordinal"
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            >
+              <XYPlot
+                animation={null}
+                className=""
+                height={0}
+                margin={
+                  Object {
+                    "left": 160,
+                    "right": 150,
+                  }
+                }
+                width={0}
+                yType="ordinal"
+              >
+                <div
+                  className="rv-xy-plot "
+                  style={
+                    Object {
+                      "height": "0px",
+                      "width": "0px",
+                    }
+                  }
+                />
+              </XYPlot>
+            </div>
+          </FlexibleXYPlot>
+        </Plot>
+      </div>
+    </styled.div>
+  </Chart>
+</ChartContainer>
+`;

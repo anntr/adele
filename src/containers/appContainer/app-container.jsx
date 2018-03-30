@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TableContainer from '../tableContainer/table-container';
 import HeaderContainer from '../headerContainer/header-container';
 import InfoContainer from '../infoContainer/info-container';
+import ModalRoot from '../../components/modal/modal-root';
 import AdeleInfo from '../../components/adeleInfo/adele-info';
 import SectionHeader from '../../components/sectionHeader/section-header';
 import UXPinPromo from '../../components/uxpinPromo/uxpin-promo';
@@ -32,36 +33,38 @@ export default class App extends Component {
 
   render() {
     return (
-      <main>
-        <HeaderContainer scroll={this.state.scroll} />
-        <TableContainer scroll={this.state.scroll} scrollUpdate={this.updateScroll} />
-        <InfoContainer>
-          <SectionHeader content="why adele?" id="adele-info" />
-          <AdeleInfo />
-          <SectionHeader content="do you need help with your system?" id="uxpin-info" />
-          <StyledTwoColumns>
-            <UXPinPromo
-              header="Evangelize Design System with a Free Template!"
-              text="40+ Slides ready for action. Perfect for team and stakeholder presentation.
+      <ModalRoot>
+        <main>
+          <HeaderContainer scroll={this.state.scroll} />
+          <TableContainer scroll={this.state.scroll} scrollUpdate={this.updateScroll} />
+          <InfoContainer>
+            <SectionHeader content="why adele?" id="adele-info" />
+            <AdeleInfo />
+            <SectionHeader content="do you need help with your system?" id="uxpin-info" />
+            <StyledTwoColumns>
+              <UXPinPromo
+                header="Evangelize Design System with a Free Template!"
+                text="40+ Slides ready for action. Perfect for team and stakeholder presentation.
                 Available as a powerpoint and keynote deck."
-              buttonLabel="Learn more & download"
-              alt="Slide Icon"
-              image={deck}
-              link="https://www.uxpin.com/evangelizing-design-system-roi-template?utm_source=adele.uxpin.com&utm_medium=upartner&utm_campaign=Adele"
-            />
-            <UXPinPromo
-              header="UXPin: Prototype and Manage Your Design System"
-              text="Join thousands of companies (including PayPal, Sapient and HBO)
+                buttonLabel="Learn more & download"
+                alt="Slide Icon"
+                image={deck}
+                link="https://www.uxpin.com/evangelizing-design-system-roi-template?utm_source=adele.uxpin.com&utm_medium=upartner&utm_campaign=Adele"
+              />
+              <UXPinPromo
+                header="UXPin: Prototype and Manage Your Design System"
+                text="Join thousands of companies (including PayPal, Sapient and HBO)
               and optimize your design process with UXPin."
-              buttonLabel="Start a free trial now!"
-              alt="Prototyping Icon"
-              image={prototyping}
-              link="https://www.uxpin.com?utm_source=adele.uxpin.com&utm_medium=upartner&utm_campaign=Adele"
-            />
-          </StyledTwoColumns>
-        </InfoContainer>
-        <Footer />
-      </main>
+                buttonLabel="Start a free trial now!"
+                alt="Prototyping Icon"
+                image={prototyping}
+                link="https://www.uxpin.com?utm_source=adele.uxpin.com&utm_medium=upartner&utm_campaign=Adele"
+              />
+            </StyledTwoColumns>
+          </InfoContainer>
+          <Footer />
+        </main>
+      </ModalRoot>
     );
   }
 }
