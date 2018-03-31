@@ -3,19 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = (env = {}) => {
-  const isProduction = env.production === true;
-  const isLocal = env.local === true;
+module.exports = () => {
   return {
     entry: ['./src/index.js'],
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'bundle.js',
-      publicPath: (() => {
-        if (isProduction) return '/build/';
-        else if (isLocal) return './';
-        return '/';
-      })(),
     },
     resolve: {
       modules: [__dirname, 'node_modules'],
